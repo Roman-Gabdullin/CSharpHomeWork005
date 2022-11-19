@@ -6,9 +6,9 @@
 
 Console.Write("Введите количество элементов массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите минимальный элемент массива: ");
+Console.Write("Введите минимальное число массива: ");
 int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите максимальный элемент массива: ");
+Console.Write("Введите максимальное число массива: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
 int[] massive = GetArray(length, min, max);

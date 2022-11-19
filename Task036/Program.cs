@@ -5,11 +5,16 @@
 
 Console.Write("Введите количество элементов массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите минимальный элемент массива: ");
+Console.Write("Введите минимальное число массива: ");
 int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите максимальный элемент массива: ");
+Console.Write("Введите максимальное число массива: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
+int[] massive = GetArray(length, min, max);
+PrintArray(massive);
+Console.WriteLine();
+int sumofelono = SumOfElementsOnOdd(massive);
+Console.Write($"Сумма элементов массива, стоящих на нечетных позициях = {sumofelono}");
 
 int[] GetArray(int len, int mn, int mx)
 {
@@ -28,4 +33,15 @@ void PrintArray(int[] array)
     {
         Console.Write(array[i] + " ");
     }
+}
+
+int SumOfElementsOnOdd(int[] array)
+{
+    int soeoo = 0;
+    for (int i = 1; i < array.Length; i++)
+    {
+        if ( i == 1 || i % 2 != 0)
+        soeoo = soeoo + array[i];
+    }
+    return soeoo;
 }
